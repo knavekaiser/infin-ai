@@ -1,0 +1,292 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  header {
+    h3 {
+      padding: 0 8px;
+      font-weight: 500;
+    }
+  }
+  .content {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: clamp(20rem, 25rem, 25rem) minmax(50rem, 1fr);
+    .category,
+    .subCategory {
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .subCategory {
+      table {
+        tbody,
+        thead {
+          tr {
+            grid-gap: 1rem;
+            input[type="checkbox"] {
+              min-width: 20px;
+              min-height: 20px;
+            }
+          }
+        }
+      }
+      form,
+      tr {
+        grid-template-columns: 1fr 1fr 5rem 6rem 3rem 3.3rem;
+      }
+    }
+    .category {
+      table {
+        tbody {
+          tr {
+            color: #3450a3;
+            form {
+              grid-template-columns: 1fr max-content;
+            }
+            .catName {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .addBtn {
+      color: #3450a3;
+      align-items: center;
+      grid-gap: 4px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .category,
+    .subCategory,
+    .masters,
+    .mastersDetails,
+    .account,
+    .personAffected,
+    .contributingFactor,
+    .personAffectedDetail,
+    .twoFieldMaster,
+    .twoFieldMasterDetail,
+    .contributingFactorDetail {
+      .head {
+        max-width: 25rem;
+        section {
+          display: flex;
+          label {
+            white-space: nowrap;
+          }
+          align-items: center;
+          grid-gap: 0.5rem;
+        }
+        margin-bottom: 0.5rem;
+      }
+      .inlineForm {
+        grid-column: 1/-1;
+        width: 100%;
+        form {
+          display: grid;
+          align-items: center;
+          grid-gap: 1rem;
+          section {
+            flex: 1;
+          }
+        }
+      }
+    }
+    .personAffected {
+      tr {
+        td:last-child {
+          margin: auto;
+          margin-right: 0;
+        }
+      }
+      .inlineForm {
+        form {
+          grid-template-columns: 1fr max-content;
+        }
+      }
+    }
+    .personAffectedDetail {
+      tr {
+        grid-template-columns: clamp(5rem, 50%, 20rem) 1fr !important;
+        th,
+        td {
+          &:last-child {
+            text-align: left;
+          }
+        }
+      }
+      .inlineForm {
+        max-width: 23rem;
+        form {
+          grid-template-columns: 1fr max-content;
+        }
+      }
+    }
+    .mastersDetails {
+      tr {
+        grid-template-columns: clamp(5rem, 50%, 20rem) 4rem 1fr !important;
+        th,
+        td {
+          &:last-child {
+            text-align: left;
+            margin: auto;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .twoFieldMaster {
+      .inlineForm {
+        form {
+          grid-template-columns: 1fr max-content;
+        }
+      }
+    }
+    .twoFieldMasterDetail {
+      tr,
+      .inlineForm form {
+        grid-template-columns: clamp(10rem, 72%, 20rem) 3rem 3rem !important;
+      }
+    }
+    .contributingFactor {
+      tr {
+        grid-template-columns: 1fr max-content;
+      }
+      .inlineForm form {
+        grid-template-columns: 1fr max-content;
+      }
+    }
+    .contributingFactorDetail {
+      tr {
+        grid-template-columns: clamp(5rem, 50%, 20rem) 4rem 1fr !important;
+        th,
+        td {
+          &:last-child {
+            text-align: left;
+            margin: auto;
+            margin-left: 0;
+          }
+        }
+      }
+      .inlineForm form {
+        grid-template-columns: 1fr max-content;
+      }
+    }
+  }
+  .accounts {
+    form {
+      display: grid;
+      align-items: center;
+      grid-gap: 0.5rem;
+    }
+    tr,
+    form {
+      grid-template-columns: 10rem 15rem 15rem 15rem 3rem 3rem;
+    }
+  }
+  .users {
+    form {
+      display: grid;
+      align-items: center;
+      grid-gap: 0.5rem;
+    }
+    tr,
+    form {
+      grid-template-columns: 12rem 8rem 10rem 8rem 10rem 15rem 10rem 10rem 3rem;
+    }
+    tr {
+      .moreRoles {
+        font-size: 14px;
+        background: #3c5ec8;
+        color: white;
+        height: 1.4rem;
+        width: 1.4rem;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        .allRoles {
+          text-align: left;
+          display: none;
+          position: absolute;
+          background: white;
+          color: black;
+          width: max-content;
+          padding: 6px;
+          right: -0.8rem;
+          top: 1.75rem;
+          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.52));
+          border-radius: 4px;
+          &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: 0.5rem solid transparent;
+            border-top: 0;
+            border-bottom: 0.7rem solid white;
+            position: absolute;
+            right: 1rem;
+            top: -0.7rem;
+          }
+        }
+        &:hover {
+          .allRoles {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .ram {
+    form {
+      display: grid;
+      align-items: center;
+      grid-gap: 0.5rem;
+    }
+    tr,
+    form {
+      grid-template-columns: 12rem 8rem 10rem 8rem 10rem 6rem 3rem;
+    }
+  }
+  .btns {
+    grid-column: 1/-1;
+    display: flex;
+    grid-gap: 0.5rem;
+    justify-content: center;
+  }
+}
+
+.categoryForm {
+  padding: 15px;
+  display: grid;
+  grid-gap: 1rem;
+  .inputs {
+    display: flex;
+    grid-gap: 0.5rem;
+  }
+}
+.annotationTemplate {
+  grid-column: 1/-1;
+  h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .form {
+    display: flex;
+    grid-gap: 0.5rem;
+    flex-wrap: wrap;
+    border: 1px solid rgb(186, 194, 199);
+    padding: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .save {
+    margin: auto;
+  }
+}

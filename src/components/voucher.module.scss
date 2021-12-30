@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  header {
+    h3 {
+      padding: 0 8px;
+      font-weight: 500;
+    }
+  }
+  .content {
+    display: grid;
+    grid-gap: 1.5rem;
+    tr,
+    .inlineForm form {
+      grid-template-columns: 15rem 15rem 15rem 15rem 15rem 3rem;
+    }
+    .inlineForm {
+      grid-column: 1/-1;
+      // width: 100%;
+      form {
+        display: grid;
+        align-items: center;
+        grid-gap: 0.5rem;
+      }
+    }
+  }
+}
